@@ -75,6 +75,7 @@ jobs:
         with:
           name: sasonica-abs-debug-apk
           path: android/app/build/outputs/apk/debug/*.apk
+          retention-days: 14
 
       - name: upload release app
         if: ${{ env.HAS_RELEASE_KEY == 'true' }}
@@ -82,3 +83,4 @@ jobs:
         with:
           name: sasonica-abs-apk
           path: android/app/build/outputs/apk/release/*.apk
+          retention-days: 14
